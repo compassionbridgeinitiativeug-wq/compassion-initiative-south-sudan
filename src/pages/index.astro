@@ -1,11 +1,1638 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const organizationName = "Compassion Initiative, South Sudan";
+const motto = "Raising Hope. Restoring Dignity. Empowering Communities.";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="Compassion Initiative, South Sudan is an indigenous organisation empowering vulnerable women and communities through livelihoods, savings, micro-loans, community development and humanitarian support."
+  />
+
+  <title>Compassion Initiative, South Sudan</title>
+
+  <style>
+    :global(*) {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :global(html) {
+      scroll-behavior: smooth;
+    }
+
+    :global(body) {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #243447;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    :global(a) {
+      text-decoration: none;
+    }
+
+    /* =========================
+       TOP BAR
+    ========================= */
+
+    .topbar {
+      background: #173f5f;
+      color: #ffffff;
+      padding: 8px 6%;
+      text-align: right;
+      font-size: 13px;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .header {
+      background: #ffffff;
+      padding: 18px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      border-bottom: 1px solid #e8e8e8;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-mark {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #d9a441;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 20px;
+      border: 4px solid #f3e2b7;
+      flex-shrink: 0;
+    }
+
+    .brand-text h1 {
+      font-size: 20px;
+      line-height: 1.2;
+      color: #173f5f;
+      margin-bottom: 3px;
+    }
+
+    .brand-text p {
+      font-size: 12px;
+      color: #777777;
+      font-weight: 600;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    nav a {
+      color: #29465b;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #d08a19;
+    }
+
+    .nav-button {
+      background: #d08a19;
+      color: #ffffff !important;
+      padding: 11px 18px;
+      border-radius: 5px;
+    }
+
+    .nav-button:hover {
+      background: #b8730f;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 690px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(18, 53, 79, 0.96) 0%,
+          rgba(18, 53, 79, 0.88) 45%,
+          rgba(18, 53, 79, 0.42) 100%
+        ),
+        url("/images/south-sudan-02.jpg") center center / cover no-repeat;
+    }
+
+    .hero-content {
+      width: 88%;
+      max-width: 1200px;
+      margin: 0 auto;
+      color: #ffffff;
+      padding: 100px 0;
+    }
+
+    .hero-label {
+      display: inline-block;
+      border-left: 4px solid #d9a441;
+      padding-left: 12px;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+      color: #f5d78f;
+    }
+
+    .hero h2 {
+      max-width: 850px;
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1.08;
+      margin-bottom: 24px;
+      font-weight: 700;
+    }
+
+    .hero h2 span {
+      color: #f0c968;
+    }
+
+    .hero p {
+      max-width: 720px;
+      font-size: 20px;
+      line-height: 1.7;
+      color: #edf4f8;
+      margin-bottom: 34px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 25px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    .button-primary {
+      background: #d08a19;
+      color: #ffffff;
+    }
+
+    .button-primary:hover {
+      background: #b8730f;
+      transform: translateY(-2px);
+    }
+
+    .button-light {
+      border: 1px solid rgba(255,255,255,0.7);
+      color: #ffffff;
+    }
+
+    .button-light:hover {
+      background: #ffffff;
+      color: #173f5f;
+    }
+
+    /* =========================
+       GENERAL SECTIONS
+    ========================= */
+
+    section {
+      padding: 90px 6%;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto 55px;
+    }
+
+    .section-heading .eyebrow {
+      color: #c17c13;
+      font-weight: bold;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .section-heading h2 {
+      color: #173f5f;
+      font-size: 38px;
+      line-height: 1.2;
+      margin-bottom: 17px;
+    }
+
+    .section-heading p {
+      color: #667788;
+      font-size: 17px;
+    }
+
+    /* =========================
+       INTRODUCTION
+    ========================= */
+
+    .intro {
+      background: #f7f9fa;
+    }
+
+    .intro-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .intro-text h3 {
+      color: #173f5f;
+      font-size: 32px;
+      margin-bottom: 20px;
+      line-height: 1.25;
+    }
+
+    .intro-text p {
+      color: #596b7a;
+      margin-bottom: 18px;
+      font-size: 16px;
+    }
+
+    .intro-photo {
+      width: 100%;
+      height: 430px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.10);
+    }
+
+    .intro-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .quote-box {
+      border-left: 5px solid #d9a441;
+      background: #ffffff;
+      padding: 28px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+      margin-top: 25px;
+    }
+
+    .quote-box p {
+      color: #173f5f;
+      font-size: 21px;
+      font-weight: 600;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* =========================
+       PROGRAMS
+    ========================= */
+
+    .programs {
+      background: #ffffff;
+    }
+
+    .program-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .program-card {
+      background: #ffffff;
+      border: 1px solid #e7ecef;
+      border-radius: 8px;
+      padding: 34px;
+      transition: 0.3s;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+    }
+
+    .program-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    }
+
+    .program-number {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: #f3e2b7;
+      color: #173f5f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .program-card h3 {
+      color: #173f5f;
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .program-card p {
+      color: #667788;
+      font-size: 15px;
+    }
+
+    /* =========================
+       WOMEN
+    ========================= */
+
+    .women {
+      background: #173f5f;
+      color: #ffffff;
+    }
+
+    .women-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .women-content .eyebrow {
+      color: #f0c968;
+      font-weight: bold;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .women-content h2 {
+      font-size: 40px;
+      line-height: 1.2;
+      margin-bottom: 22px;
+    }
+
+    .women-content p {
+      color: #dce8ef;
+      margin-bottom: 18px;
+      font-size: 16px;
+    }
+
+    .women-list {
+      margin-top: 25px;
+      list-style: none;
+    }
+
+    .women-list li {
+      margin-bottom: 13px;
+      padding-left: 25px;
+      position: relative;
+      color: #edf4f8;
+    }
+
+    .women-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #f0c968;
+      font-weight: bold;
+    }
+
+    .women-photos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .women-photo {
+      height: 230px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .women-photo.large {
+      grid-column: span 2;
+      height: 300px;
+    }
+
+    .women-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .women-highlight {
+      background: rgba(255,255,255,0.09);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 30px;
+      border-radius: 8px;
+      margin-top: 25px;
+    }
+
+    .women-highlight h3 {
+      color: #f0c968;
+      font-size: 26px;
+      margin-bottom: 18px;
+    }
+
+    .women-highlight p {
+      color: #e0ebf1;
+      font-size: 17px;
+    }
+
+    /* =========================
+       HUMANITARIAN
+    ========================= */
+
+    .humanitarian {
+      background: #f7f5ef;
+    }
+
+    .humanitarian-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .humanitarian-box {
+      background: #ffffff;
+      padding: 38px;
+      border-radius: 8px;
+      border-top: 5px solid #d08a19;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    }
+
+    .humanitarian-box h3 {
+      color: #173f5f;
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+
+    .humanitarian-box p {
+      color: #617180;
+      margin-bottom: 18px;
+    }
+
+    .humanitarian-photo {
+      width: 100%;
+      height: 450px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.10);
+    }
+
+    .humanitarian-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* =========================
+       APPROACH
+    ========================= */
+
+    .approach {
+      background: #ffffff;
+    }
+
+    .approach-flow {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .approach-step {
+      background: #f2f6f8;
+      color: #173f5f;
+      padding: 17px 22px;
+      border-radius: 5px;
+      font-weight: bold;
+      border-bottom: 3px solid #d9a441;
+    }
+
+    .arrow {
+      color: #c58a27;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    /* =========================
+       VALUES
+    ========================= */
+
+    .values {
+      background: #f7f9fa;
+    }
+
+    .values-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .value {
+      background: #ffffff;
+      padding: 25px 20px;
+      text-align: center;
+      border-radius: 7px;
+      border: 1px solid #e7ecef;
+    }
+
+    .value h3 {
+      color: #173f5f;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .value p {
+      color: #758391;
+      font-size: 13px;
+    }
+
+    /* =========================
+       GALLERY
+    ========================= */
+
+    .gallery {
+      background: #ffffff;
+    }
+
+    .gallery-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .gallery-item {
+      height: 270px;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+      background: #e8edf0;
+    }
+
+    .gallery-item.tall {
+      height: 390px;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.04);
+    }
+
+    .gallery-caption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 35px 18px 15px;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 14px;
+      background: linear-gradient(transparent, rgba(0,0,0,0.75));
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+      background: linear-gradient(135deg, #173f5f, #245b80);
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .cta h2 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 700px;
+      margin: 0 auto 28px;
+      color: #e0ebf1;
+      font-size: 17px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #102f46;
+      color: #ffffff;
+      padding: 55px 6% 25px;
+    }
+
+    .footer-grid {
+      max-width: 1150px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 50px;
+    }
+
+    footer h3 {
+      margin-bottom: 15px;
+      color: #f0c968;
+    }
+
+    footer p,
+    footer li {
+      color: #c9d6df;
+      font-size: 14px;
+    }
+
+    footer ul {
+      list-style: none;
+    }
+
+    footer li {
+      margin-bottom: 8px;
+    }
+
+    footer a {
+      color: #c9d6df;
+    }
+
+    footer a:hover {
+      color: #f0c968;
+    }
+
+    .footer-bottom {
+      max-width: 1150px;
+      margin: 40px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      text-align: center;
+      color: #9fb1be;
+      font-size: 13px;
+    }
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 900px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .intro-grid,
+      .women-grid,
+      .humanitarian-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero {
+        min-height: 600px;
+      }
+
+      .hero h2 {
+        font-size: 48px;
+      }
+
+      .women-photos {
+        max-width: 700px;
+        margin: 0 auto;
+      }
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 600px) {
+      .topbar {
+        text-align: center;
+        font-size: 11px;
+      }
+
+      .header {
+        padding: 15px 5%;
+      }
+
+      .brand-mark {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+      }
+
+      .brand-text h1 {
+        font-size: 18px;
+      }
+
+      nav {
+        gap: 10px;
+      }
+
+      nav a {
+        font-size: 12px;
+      }
+
+      .nav-button {
+        padding: 9px 13px;
+      }
+
+      section {
+        padding: 65px 5%;
+      }
+
+      .hero {
+        min-height: 650px;
+        background-position: 62% center;
+      }
+
+      .hero-content {
+        width: 90%;
+        padding: 65px 0;
+      }
+
+      .hero h2 {
+        font-size: 40px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .button {
+        padding: 13px 20px;
+      }
+
+      .intro-text h3 {
+        font-size: 28px;
+      }
+
+      .intro-photo {
+        height: 300px;
+      }
+
+      .program-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-item,
+      .gallery-item.tall {
+        height: 280px;
+      }
+
+      .women-content h2 {
+        font-size: 32px;
+      }
+
+      .women-photos {
+        grid-template-columns: 1fr;
+      }
+
+      .women-photo,
+      .women-photo.large {
+        grid-column: span 1;
+        height: 280px;
+      }
+
+      .humanitarian-photo {
+        height: 300px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .approach-step {
+        width: 100%;
+        text-align: center;
+      }
+
+      .arrow {
+        display: none;
+      }
+
+      .cta h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    South Sudan • Indigenous • Community-Led • Compassionate Action
+  </div>
+
+  <!-- HEADER -->
+  <header class="header">
+
+    <a href="/" class="brand">
+      <div class="brand-mark">CI</div>
+
+      <div class="brand-text">
+        <h1>Compassion Initiative</h1>
+        <p>South Sudan</p>
+      </div>
+    </a>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#programs">Our Work</a>
+      <a href="#women">Women</a>
+      <a href="#humanitarian">Humanitarian</a>
+      <a href="#approach">Our Approach</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact" class="nav-button">Get Involved</a>
+    </nav>
+
+  </header>
+
+
+  <!-- HERO -->
+  <main>
+
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <div class="hero-label">
+          Compassion Initiative, South Sudan
+        </div>
+
+        <h2>
+          Raising Hope.<br />
+          Restoring <span>Dignity.</span><br />
+          Empowering Communities.
+        </h2>
+
+        <p>
+          We walk alongside vulnerable women and communities in South Sudan,
+          creating opportunities for economic independence, resilience,
+          dignity and hope.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#women" class="button button-primary">
+            Empower Women
+          </a>
+
+          <a href="#about" class="button button-light">
+            Discover Our Work
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- INTRODUCTION -->
+    <section class="intro" id="about">
+
+      <div class="intro-grid">
+
+        <div class="intro-text">
+
+          <h3>
+            Standing with people as they rebuild their lives.
+          </h3>
+
+          <p>
+            Compassion Initiative, South Sudan (CISS) is an indigenous
+            South Sudanese organisation committed to raising hope among
+            vulnerable people, restoring dignity and empowering communities
+            to build better and more sustainable lives.
+          </p>
+
+          <p>
+            We understand the realities faced by communities affected by
+            poverty, conflict, displacement, hunger, disasters and limited
+            economic opportunities.
+          </p>
+
+          <p>
+            Our work seeks not only to respond to immediate needs, but also
+            to help people rebuild livelihoods, strengthen resilience and
+            become active participants in shaping their own future.
+          </p>
+
+          <div class="quote-box">
+            <p>
+              “We do not see vulnerable people simply as recipients of
+              assistance. We see individuals with gifts, knowledge, abilities
+              and potential.”
+            </p>
+          </div>
+
+        </div>
+
+        <div class="intro-photo">
+          <img
+            src="/images/south-sudan-02.jpg"
+            alt="Women and community members participating in Compassion Initiative activities in South Sudan"
+          />
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PROGRAMS -->
+    <section class="programs" id="programs">
+
+      <div class="section-heading">
+
+        <div class="eyebrow">
+          What We Do
+        </div>
+
+        <h2>
+          Creating opportunities where hope can grow
+        </h2>
+
+        <p>
+          Our programmes respond to immediate needs while building the
+          foundations for longer-term resilience and self-reliance.
+        </p>
+
+      </div>
+
+
+      <div class="program-grid">
+
+        <article class="program-card">
+
+          <div class="program-number">01</div>
+
+          <h3>
+            Women's Economic Empowerment
+          </h3>
+
+          <p>
+            We support vulnerable women, particularly widows and women
+            affected by conflict, poverty and displacement, to strengthen
+            their economic independence and participation in community life.
+          </p>
+
+        </article>
+
+
+        <article class="program-card">
+
+          <div class="program-number">02</div>
+
+          <h3>
+            Savings & Micro-Loans
+          </h3>
+
+          <p>
+            We organise women into savings groups and provide start-up
+            capital that enables them to begin small businesses and other
+            income-generating activities.
+          </p>
+
+        </article>
+
+
+        <article class="program-card">
+
+          <div class="program-number">03</div>
+
+          <h3>
+            Skills & Entrepreneurship
+          </h3>
+
+          <p>
+            We provide practical support in financial management, savings,
+            entrepreneurship, small business development and community
+            leadership.
+          </p>
+
+        </article>
+
+
+        <article class="program-card">
+
+          <div class="program-number">04</div>
+
+          <h3>
+            Humanitarian & Relief Support
+          </h3>
+
+          <p>
+            We stand alongside communities affected by disasters,
+            displacement, hunger and other emergencies through appropriate
+            humanitarian and relief support.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- WOMEN -->
+    <section class="women" id="women">
+
+      <div class="women-grid">
+
+        <div class="women-content">
+
+          <div class="eyebrow">
+            Our Core Activity
+          </div>
+
+          <h2>
+            Empowering Women Through Opportunity, Dignity and Economic Independence
+          </h2>
+
+          <p>
+            We believe women should not only receive assistance. They should
+            have opportunities to rebuild their lives, support their families
+            and become economically independent.
+          </p>
+
+          <p>
+            Through savings groups, micro-loans, skills development and
+            compassionate community support, women are gaining confidence,
+            learning to manage resources collectively and becoming active
+            contributors to their families and communities.
+          </p>
+
+          <ul class="women-list">
+            <li>Savings and lending groups</li>
+            <li>Small business and income-generating activities</li>
+            <li>Financial management and entrepreneurship</li>
+            <li>Community leadership and participation</li>
+            <li>Support for widows and vulnerable women</li>
+          </ul>
+
+          <div class="women-highlight">
+
+            <h3>
+              From dependency toward self-reliance
+            </h3>
+
+            <p>
+              Our goal is not simply to provide temporary assistance. We want
+              women to have the confidence, skills, resources and opportunities
+              to shape a more secure future for themselves and their families.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="women-photos">
+
+          <div class="women-photo large">
+            <img
+              src="/images/south-sudan-10.jpg"
+              alt="Women participating in a savings group activity"
+            />
+          </div>
+
+          <div class="women-photo">
+            <img
+              src="/images/south-sudan-09.jpg"
+              alt="Women participating in a community savings and lending activity"
+            />
+          </div>
+
+          <div class="women-photo">
+            <img
+              src="/images/south-sudan-08.jpg"
+              alt="Women gathered for community empowerment activities"
+            />
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- HUMANITARIAN -->
+    <section class="humanitarian" id="humanitarian">
+
+      <div class="section-heading">
+
+        <div class="eyebrow">
+          Standing With Communities
+        </div>
+
+        <h2>
+          Compassion when communities face crisis
+        </h2>
+
+        <p>
+          When disaster and displacement threaten people's ability to meet
+          their basic needs, we seek to respond with dignity and compassion.
+        </p>
+
+      </div>
+
+
+      <div class="humanitarian-grid">
+
+        <div class="humanitarian-box">
+
+          <h3>
+            Humanitarian Response
+          </h3>
+
+          <p>
+            Communities in South Sudan can face severe challenges caused by
+            conflict, displacement, flooding, drought, hunger and other
+            disasters.
+          </p>
+
+          <p>
+            Compassion Initiative seeks to provide appropriate relief support
+            while connecting emergency assistance with longer-term recovery,
+            resilience and community empowerment.
+          </p>
+
+          <a href="#contact" class="button button-primary">
+            Support This Work
+          </a>
+
+        </div>
+
+
+        <div class="humanitarian-photo">
+
+          <img
+            src="/images/south-sudan-01.jpg"
+            alt="Humanitarian relief supplies prepared for communities in South Sudan"
+          />
+
+        </div>
+
+      </div>
+
+
+      <div class="intro-grid" style="margin-top:55px;">
+
+        <div class="humanitarian-photo">
+
+          <img
+            src="/images/south-sudan-06.jpg"
+            alt="Community members receiving humanitarian assistance"
+          />
+
+        </div>
+
+        <div>
+
+          <h3 style="color:#173f5f; font-size:30px; margin-bottom:18px;">
+            Relief is about more than supplies.
+          </h3>
+
+          <p style="color:#667788; font-size:17px;">
+            It is about standing with people during difficult moments,
+            listening to their needs, respecting their dignity and helping
+            communities find pathways toward recovery.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- APPROACH -->
+    <section class="approach" id="approach">
+
+      <div class="section-heading">
+
+        <div class="eyebrow">
+          Our Approach
+        </div>
+
+        <h2>
+          People at the centre of change
+        </h2>
+
+        <p>
+          We believe lasting transformation happens when communities
+          participate in identifying problems and developing solutions.
+        </p>
+
+      </div>
+
+
+      <div class="approach-flow">
+
+        <div class="approach-step">Listen</div>
+
+        <div class="arrow">→</div>
+
+        <div class="approach-step">Understand</div>
+
+        <div class="arrow">→</div>
+
+        <div class="approach-step">Empower</div>
+
+        <div class="arrow">→</div>
+
+        <div class="approach-step">Equip</div>
+
+        <div class="arrow">→</div>
+
+        <div class="approach-step">Accompany</div>
+
+        <div class="arrow">→</div>
+
+        <div class="approach-step">Transform</div>
+
+      </div>
+
+    </section>
+
+
+    <!-- VALUES -->
+    <section class="values">
+
+      <div class="section-heading">
+
+        <div class="eyebrow">
+          What Guides Us
+        </div>
+
+        <h2>
+          Our Core Values
+        </h2>
+
+      </div>
+
+
+      <div class="values-grid">
+
+        <div class="value">
+          <h3>Compassion</h3>
+          <p>We respond with love, understanding and genuine care.</p>
+        </div>
+
+        <div class="value">
+          <h3>Dignity</h3>
+          <p>Every person deserves respect and opportunity.</p>
+        </div>
+
+        <div class="value">
+          <h3>Hope</h3>
+          <p>We believe a better future is possible.</p>
+        </div>
+
+        <div class="value">
+          <h3>Empowerment</h3>
+          <p>We equip people rather than creating dependency.</p>
+        </div>
+
+        <div class="value">
+          <h3>Integrity</h3>
+          <p>We value honesty, accountability and transparency.</p>
+        </div>
+
+        <div class="value">
+          <h3>Community Ownership</h3>
+          <p>Communities participate in shaping their own solutions.</p>
+        </div>
+
+        <div class="value">
+          <h3>Partnership</h3>
+          <p>We collaborate to create lasting impact.</p>
+        </div>
+
+        <div class="value">
+          <h3>Service</h3>
+          <p>We serve with humility and commitment.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PHOTO GALLERY -->
+    <section class="gallery" id="gallery">
+
+      <div class="section-heading">
+
+        <div class="eyebrow">
+          In The Community
+        </div>
+
+        <h2>
+          Compassion in action
+        </h2>
+
+        <p>
+          Through community-led action, Compassion Initiative walks alongside
+          women and families as they build livelihoods, strengthen resilience
+          and respond to difficult circumstances.
+        </p>
+
+      </div>
+
+
+      <div class="gallery-grid">
+
+        <div class="gallery-item tall">
+          <img
+            src="/images/south-sudan-01.jpg"
+            alt="Humanitarian supplies prepared for community distribution"
+          />
+          <div class="gallery-caption">
+            Humanitarian relief and community support
+          </div>
+        </div>
+
+
+        <div class="gallery-item">
+          <img
+            src="/images/south-sudan-02.jpg"
+            alt="Community members participating in relief activities"
+          />
+          <div class="gallery-caption">
+            Standing with communities
+          </div>
+        </div>
+
+
+        <div class="gallery-item">
+          <img
+            src="/images/south-sudan-03.jpg"
+            alt="Relief supplies prepared for distribution"
+          />
+          <div class="gallery-caption">
+            Responding to urgent needs
+          </div>
+        </div>
+
+
+        <div class="gallery-item">
+          <img
+            src="/images/south-sudan-04.jpg"
+            alt="Food and essential supplies prepared for families"
+          />
+          <div class="gallery-caption">
+            Compassionate humanitarian action
+          </div>
+        </div>
+
+
+        <div class="gallery-item tall">
+          <img
+            src="/images/south-sudan-05.jpg"
+            alt="Community members receiving relief assistance"
+          />
+          <div class="gallery-caption">
+            Relief reaching communities
+          </div>
+        </div>
+
+
+        <div class="gallery-item">
+          <img
+            src="/images/south-sudan-06.jpg"
+            alt="Families and community members receiving assistance"
+          />
+          <div class="gallery-caption">
+            Restoring dignity during crisis
+          </div>
+        </div>
+
+
+        <div class="gallery-item">
+          <img
+            src="/images/south-sudan-07.jpg"
+            alt="Community members gathered during humanitarian activities"
+          />
+          <div class="gallery-caption">
+            Community-led response
+          </div>
+        </div>
+
+
+        <div class="gallery-item">
+          <img
+            src="/images/south-sudan-08.jpg"
+            alt="Women gathered for community activities"
+          />
+          <div class="gallery-caption">
+            Women building stronger communities
+          </div>
+        </div>
+
+
+        <div class="gallery-item tall">
+          <img
+            src="/images/south-sudan-09.jpg"
+            alt="Women participating in savings and lending activities"
+          />
+          <div class="gallery-caption">
+            Savings, lending and economic empowerment
+          </div>
+        </div>
+
+
+        <div class="gallery-item">
+          <img
+            src="/images/south-sudan-10.jpg"
+            alt="Women participating in a savings group"
+          />
+          <div class="gallery-caption">
+            Empowering women through opportunity
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="cta" id="contact">
+
+      <h2>
+        Be part of raising hope.
+      </h2>
+
+      <p>
+        Compassion Initiative, South Sudan is committed to walking alongside
+        vulnerable women and communities as they move from vulnerability
+        toward resilience, dignity and opportunity.
+      </p>
+
+      <a
+        href="mailto:info@compassioninitiativesouthsudan.org"
+        class="button button-primary"
+      >
+        Contact Compassion Initiative
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-grid">
+
+      <div>
+
+        <h3>
+          Compassion Initiative, South Sudan
+        </h3>
+
+        <p>
+          Raising Hope. Restoring Dignity. Empowering Communities.
+        </p>
+
+        <p style="margin-top:15px;">
+          An indigenous South Sudanese organisation working alongside
+          vulnerable women and communities.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Our Work
+        </h3>
+
+        <ul>
+          <li>Women's Empowerment</li>
+          <li>Savings & Micro-Loans</li>
+          <li>Skills Development</li>
+          <li>Community Development</li>
+          <li>Humanitarian Response</li>
+        </ul>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Connect With Us
+        </h3>
+
+        <p>
+          Compassion Initiative, South Sudan
+        </p>
+
+        <p style="margin-top:10px;">
+          <a href="mailto:info@compassioninitiativesouthsudan.org">
+            info@compassioninitiativesouthsudan.org
+          </a>
+        </p>
+
+        <p style="margin-top:10px;">
+          Building hope. Restoring dignity.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+      © 2026 Compassion Initiative, South Sudan. All rights reserved.
+    </div>
+
+  </footer>
+
+</body>
+</html>
