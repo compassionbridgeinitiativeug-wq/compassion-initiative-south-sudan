@@ -3,616 +3,246 @@
 
 <header class="site-header">
 
-  <!-- Top identity strip -->
-  <div class="top-strip">
-    South Sudan • Indigenous • Community-Led • Compassionate Action
-  </div>
+  <div class="header-inner">
 
-  <!-- Main navigation -->
-  <div class="nav-container">
-
-    <!-- Logo / Organisation name -->
     <a href="/" class="brand">
 
-      <div class="brand-mark">CI</div>
+      <img
+        src="/images/compassion-initiative-logo.png"
+        alt="Compassion Initiative South Sudan"
+        class="logo"
+      />
 
-      <div class="brand-text">
-        <strong>Compassion Initiative</strong>
-        <span>South Sudan</span>
+      <div class="brand-name">
+        <div class="organization">
+          Compassion Initiative
+        </div>
+
+        <div class="country">
+          South Sudan
+        </div>
       </div>
 
     </a>
 
-    <!-- Desktop navigation -->
-    <nav class="desktop-nav" aria-label="Main navigation">
+
+    <nav class="navigation">
 
       <a href="#about">About</a>
+
       <a href="#programs">Our Work</a>
+
       <a href="#women">Women</a>
+
+      <a href="#education">Education</a>
+
       <a href="#humanitarian">Humanitarian</a>
+
       <a href="#approach">Our Approach</a>
+
       <a href="#gallery">Gallery</a>
 
-      <a href="#contact" class="nav-button">
+      <a href="#contact" class="get-involved">
         Get Involved
       </a>
 
     </nav>
 
-    <!-- Mobile menu button -->
-    <button
-      class="menu-button"
-      id="menu-button"
-      type="button"
-      aria-label="Open navigation menu"
-      aria-expanded="false"
-      aria-controls="mobile-menu"
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
   </div>
-
-  <!-- Mobile navigation -->
-  <nav
-    class="mobile-menu"
-    id="mobile-menu"
-    aria-label="Mobile navigation"
-  >
-
-    <a href="#about">About</a>
-
-    <a href="#programs">Our Work</a>
-
-    <a href="#women">Women</a>
-
-    <a href="#humanitarian">Humanitarian</a>
-
-    <a href="#approach">Our Approach</a>
-
-    <a href="#gallery">Gallery</a>
-
-    <a href="#contact" class="mobile-button">
-      Get Involved
-    </a>
-
-  </nav>
 
 </header>
 
 
 <style>
 
-  /* =========================================
-     MAIN HEADER
-  ========================================= */
-
   .site-header {
     width: 100%;
     background: #ffffff;
-    position: relative;
+    border-bottom: 1px solid #e7e7e7;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    position: sticky;
+    top: 0;
     z-index: 1000;
   }
 
 
-  /* =========================================
-     TOP STRIP
-  ========================================= */
-
-  .top-strip {
-    width: 100%;
-    background: #202020;
-    color: #ffffff;
-
-    text-align: right;
-
-    padding: 9px 5%;
-
-    font-size: 12px;
-    letter-spacing: 0.4px;
-
-    box-sizing: border-box;
-  }
-
-
-  /* =========================================
-     MAIN NAVIGATION CONTAINER
-  ========================================= */
-
-  .nav-container {
-    width: 100%;
-    max-width: 1400px;
-
+  .header-inner {
+    width: 92%;
+    max-width: 1250px;
     margin: 0 auto;
 
-    padding: 16px 5%;
+    min-height: 92px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    box-sizing: border-box;
+    gap: 30px;
   }
 
-
-  /* =========================================
-     BRAND
-  ========================================= */
 
   .brand {
     display: flex;
     align-items: center;
 
-    gap: 12px;
+    gap: 13px;
 
     text-decoration: none;
 
-    color: #183b63;
-
     flex-shrink: 0;
   }
 
 
-  .brand-mark {
-    width: 46px;
-    height: 46px;
+  .logo {
+    width: 72px;
+    height: 72px;
 
-    border-radius: 50%;
+    object-fit: contain;
 
-    background: #c77b5b;
-    color: #ffffff;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 16px;
-    font-weight: 700;
-
-    letter-spacing: 0.5px;
-
-    flex-shrink: 0;
+    display: block;
   }
 
 
-  .brand-text {
-    display: flex;
-    flex-direction: column;
-
+  .brand-name {
     line-height: 1.15;
+  }
+
+
+  .organization {
+    color: #173f5f;
+
+    font-size: 22px;
+
+    font-weight: 700;
 
     white-space: nowrap;
   }
 
 
-  .brand-text strong {
-    font-size: 18px;
-    font-weight: 700;
-
-    color: #173b63;
-  }
-
-
-  .brand-text span {
-    margin-top: 4px;
-
-    font-size: 12px;
-
-    color: #555555;
-  }
-
-
-  /* =========================================
-     DESKTOP NAVIGATION
-  ========================================= */
-
-  .desktop-nav {
-    display: flex;
-
-    align-items: center;
-
-    gap: 24px;
-
-    margin-left: auto;
-  }
-
-
-  .desktop-nav a {
-    color: #263d57;
-
-    text-decoration: none;
+  .country {
+    color: #777777;
 
     font-size: 13px;
 
+    margin-top: 4px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+  }
+
+
+  .navigation {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+  }
+
+
+  .navigation a {
+    color: #29465b;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
     font-weight: 600;
 
     white-space: nowrap;
 
     transition:
-      color 0.2s ease,
-      background 0.2s ease,
-      transform 0.2s ease;
+      color 0.25s ease;
   }
 
 
-  .desktop-nav a:hover {
-    color: #c77b5b;
+  .navigation a:hover {
+    color: #c47d15;
   }
 
 
-  /* =========================================
-     GET INVOLVED DESKTOP BUTTON
-  ========================================= */
-
-  .desktop-nav .nav-button {
-    background: #c77b5b;
+  .navigation .get-involved {
+    background: #d08a19;
 
     color: #ffffff;
 
-    padding: 12px 17px;
+    padding: 12px 18px;
 
-    border-radius: 4px;
-
-    transition:
-      background 0.2s ease,
-      transform 0.2s ease;
+    border-radius: 5px;
   }
 
 
-  .desktop-nav .nav-button:hover {
-    background: #ae6348;
+  .navigation .get-involved:hover {
+    background: #b36f0d;
 
     color: #ffffff;
-
-    transform: translateY(-1px);
   }
 
 
-  /* =========================================
-     MOBILE MENU BUTTON
-  ========================================= */
+  @media (max-width: 1050px) {
 
-  .menu-button {
-    display: none;
+    .header-inner {
+      flex-direction: column;
 
-    width: 46px;
-    height: 42px;
+      justify-content: center;
 
-    border: none;
+      padding: 15px 0;
 
-    background: transparent;
-
-    cursor: pointer;
-
-    padding: 8px;
-
-    flex-direction: column;
-
-    justify-content: center;
-
-    align-items: center;
-
-    gap: 5px;
-
-    flex-shrink: 0;
-  }
-
-
-  .menu-button span {
-    display: block;
-
-    width: 25px;
-    height: 2px;
-
-    background: #173b63;
-
-    border-radius: 2px;
-
-    transition:
-      transform 0.25s ease,
-      opacity 0.25s ease;
-  }
-
-
-  /* =========================================
-     MOBILE MENU
-  ========================================= */
-
-  .mobile-menu {
-    display: none;
-
-    width: 100%;
-
-    background: #ffffff;
-
-    border-top: 1px solid #eeeeee;
-
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-
-    padding: 8px 5% 18px;
-
-    box-sizing: border-box;
-  }
-
-
-  .mobile-menu.open {
-    display: block;
-  }
-
-
-  .mobile-menu a {
-    display: block;
-
-    padding: 14px 5px;
-
-    color: #173b63;
-
-    text-decoration: none;
-
-    font-size: 15px;
-
-    font-weight: 600;
-
-    border-bottom: 1px solid #eeeeee;
-  }
-
-
-  .mobile-menu a:hover {
-    color: #c77b5b;
-  }
-
-
-  /* =========================================
-     MOBILE GET INVOLVED BUTTON
-  ========================================= */
-
-  .mobile-menu .mobile-button {
-    display: block;
-
-    margin-top: 14px;
-
-    padding: 13px 18px;
-
-    border-radius: 4px;
-
-    background: #c77b5b;
-
-    color: #ffffff;
-
-    text-align: center;
-
-    border-bottom: none;
-  }
-
-
-  .mobile-menu .mobile-button:hover {
-    color: #ffffff;
-
-    background: #ae6348;
-  }
-
-
-  /* =========================================
-     TABLETS AND SMALLER LAPTOPS
-  ========================================= */
-
-  @media (max-width: 1100px) {
-
-    .desktop-nav {
-      gap: 17px;
+      gap: 15px;
     }
 
-    .desktop-nav a {
+
+    .navigation {
+      justify-content: center;
+
+      gap: 14px;
+    }
+
+  }
+
+
+  @media (max-width: 650px) {
+
+    .header-inner {
+      width: 94%;
+    }
+
+
+    .logo {
+      width: 60px;
+      height: 60px;
+    }
+
+
+    .organization {
+      font-size: 18px;
+    }
+
+
+    .country {
       font-size: 12px;
     }
 
-    .desktop-nav .nav-button {
-      padding: 11px 14px;
-    }
 
-  }
-
-
-  /* =========================================
-     MOBILE / TABLET NAVIGATION
-  ========================================= */
-
-  @media (max-width: 950px) {
-
-    .top-strip {
-      text-align: center;
-
-      font-size: 11px;
-
-      padding: 8px 4%;
-    }
-
-
-    .nav-container {
-      padding: 14px 5%;
-    }
-
-
-    /* Hide desktop navigation */
-    .desktop-nav {
-      display: none;
-    }
-
-
-    /* Show hamburger */
-    .menu-button {
-      display: flex;
-    }
-
-
-    /* Show mobile menu when opened */
-    .mobile-menu.open {
-      display: block;
-    }
-
-  }
-
-
-  /* =========================================
-     HAMBURGER → X ANIMATION
-  ========================================= */
-
-  .menu-button.active span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-  }
-
-
-  .menu-button.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-
-  .menu-button.active span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-  }
-
-
-  /* =========================================
-     SMALL PHONES
-  ========================================= */
-
-  @media (max-width: 500px) {
-
-    .top-strip {
-      font-size: 10px;
-
-      letter-spacing: 0.2px;
-
-      padding: 7px 3%;
-    }
-
-
-    .nav-container {
-      padding: 12px 4%;
-    }
-
-
-    .brand {
+    .navigation {
       gap: 10px;
     }
 
 
-    .brand-mark {
-      width: 42px;
-      height: 42px;
-
-      font-size: 15px;
+    .navigation a {
+      font-size: 12px;
     }
 
 
-    .brand-text strong {
-      font-size: 16px;
-    }
-
-
-    .brand-text span {
-      font-size: 11px;
-    }
-
-
-    .menu-button {
-      width: 44px;
-      height: 40px;
-    }
-
-  }
-
-
-  /* =========================================
-     VERY SMALL PHONES
-  ========================================= */
-
-  @media (max-width: 360px) {
-
-    .brand-text strong {
-      font-size: 15px;
-    }
-
-
-    .brand-text span {
-      font-size: 10px;
-    }
-
-
-    .brand-mark {
-      width: 40px;
-      height: 40px;
+    .navigation .get-involved {
+      padding: 9px 12px;
     }
 
   }
 
 </style>
-
-
-<script>
-
-  const menuButton =
-    document.getElementById('menu-button');
-
-  const mobileMenu =
-    document.getElementById('mobile-menu');
-
-
-  if (menuButton && mobileMenu) {
-
-    menuButton.addEventListener('click', () => {
-
-      const isOpen =
-        mobileMenu.classList.toggle('open');
-
-      menuButton.classList.toggle(
-        'active',
-        isOpen
-      );
-
-      menuButton.setAttribute(
-        'aria-expanded',
-        isOpen ? 'true' : 'false'
-      );
-
-      menuButton.setAttribute(
-        'aria-label',
-        isOpen
-          ? 'Close navigation menu'
-          : 'Open navigation menu'
-      );
-
-    });
-
-
-    /* Close menu after clicking a link */
-
-    mobileMenu
-      .querySelectorAll('a')
-      .forEach((link) => {
-
-        link.addEventListener('click', () => {
-
-          mobileMenu.classList.remove('open');
-
-          menuButton.classList.remove('active');
-
-          menuButton.setAttribute(
-            'aria-expanded',
-            'false'
-          );
-
-          menuButton.setAttribute(
-            'aria-label',
-            'Open navigation menu'
-          );
-
-        });
-
-      });
-
-  }
-
-</script>
