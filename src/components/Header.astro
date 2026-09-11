@@ -14,6 +14,7 @@
       />
 
       <div class="brand-name">
+
         <div class="organization">
           Compassion Initiative
         </div>
@@ -21,6 +22,7 @@
         <div class="country">
           South Sudan
         </div>
+
       </div>
 
     </a>
@@ -28,22 +30,40 @@
 
     <nav class="navigation">
 
-      <a href="#about">About</a>
+      <a href="#about">
+        About
+      </a>
 
-      <a href="#programs">Our Work</a>
+      <a href="#programs">
+        Our Work
+      </a>
 
-      <a href="#women">Women</a>
+      <a href="#women">
+        Women
+      </a>
 
-      <a href="#education">Education</a>
+      <a href="#education">
+        Education
+      </a>
 
-      <a href="#humanitarian">Humanitarian</a>
+      <a href="#humanitarian">
+        Humanitarian
+      </a>
 
-      <a href="#approach">Our Approach</a>
+      <a href="#approach">
+        Our Approach
+      </a>
 
-      <a href="#gallery">Gallery</a>
+      <a href="#gallery">
+        Gallery
+      </a>
 
       <a href="#contact" class="get-involved">
         Get Involved
+      </a>
+
+      <a href="/donate" class="donate-button">
+        Donate
       </a>
 
     </nav>
@@ -84,11 +104,8 @@
   .brand {
     display: flex;
     align-items: center;
-
     gap: 13px;
-
     text-decoration: none;
-
     flex-shrink: 0;
   }
 
@@ -96,9 +113,7 @@
   .logo {
     width: 72px;
     height: 72px;
-
     object-fit: contain;
-
     display: block;
   }
 
@@ -110,54 +125,41 @@
 
   .organization {
     color: #173f5f;
-
     font-size: 22px;
-
     font-weight: 700;
-
     white-space: nowrap;
   }
 
 
   .country {
     color: #777777;
-
     font-size: 13px;
-
     margin-top: 4px;
-
     font-weight: 600;
-
     letter-spacing: 0.5px;
   }
 
 
   .navigation {
     display: flex;
-
     align-items: center;
-
     justify-content: flex-end;
-
     gap: 20px;
-
     flex-wrap: wrap;
   }
 
 
   .navigation a {
     color: #29465b;
-
     text-decoration: none;
-
     font-size: 14px;
-
     font-weight: 600;
-
     white-space: nowrap;
 
     transition:
-      color 0.25s ease;
+      color 0.25s ease,
+      background 0.25s ease,
+      transform 0.25s ease;
   }
 
 
@@ -168,27 +170,54 @@
 
   .navigation .get-involved {
     background: #d08a19;
-
     color: #ffffff;
-
     padding: 12px 18px;
-
     border-radius: 5px;
   }
 
 
   .navigation .get-involved:hover {
     background: #b36f0d;
-
     color: #ffffff;
+    transform: translateY(-1px);
   }
 
+
+  /* =========================================================
+     DONATE BUTTON
+  ========================================================== */
+
+  .navigation .donate-button {
+    background: #173f5f;
+    color: #ffffff;
+
+    padding: 12px 20px;
+
+    border-radius: 5px;
+
+    font-weight: 700;
+
+    box-shadow:
+      0 3px 8px rgba(23,63,95,0.18);
+  }
+
+
+  .navigation .donate-button:hover {
+    background: #0f3048;
+    color: #ffffff;
+
+    transform: translateY(-1px);
+  }
+
+
+  /* =========================================================
+     TABLET
+  ========================================================== */
 
   @media (max-width: 1050px) {
 
     .header-inner {
       flex-direction: column;
-
       justify-content: center;
 
       padding: 15px 0;
@@ -199,12 +228,15 @@
 
     .navigation {
       justify-content: center;
-
       gap: 14px;
     }
 
   }
 
+
+  /* =========================================================
+     MOBILE
+  ========================================================== */
 
   @media (max-width: 650px) {
 
@@ -239,7 +271,8 @@
     }
 
 
-    .navigation .get-involved {
+    .navigation .get-involved,
+    .navigation .donate-button {
       padding: 9px 12px;
     }
 

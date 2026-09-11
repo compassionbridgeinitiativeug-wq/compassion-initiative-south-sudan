@@ -17,7 +17,7 @@ const motto = "Raising Hope. Restoring Dignity. Empowering Communities.";
 
   <meta
     name="description"
-    content="Compassion Initiative, South Sudan is an indigenous organisation working alongside vulnerable women, children and communities through education, women's empowerment, livelihoods, community development and humanitarian response."
+    content="Compassion Initiative, South Sudan is an indigenous organisation working alongside vulnerable women, children and communities through education, women's empowerment, agriculture and livelihoods, community development and humanitarian response."
   />
 
   <title>
@@ -209,6 +209,33 @@ const motto = "Raising Hope. Restoring Dignity. Empowering Communities.";
       background: #b8730f;
 
       color: #ffffff !important;
+    }
+
+
+    .donate-nav {
+
+      background: #173f5f;
+
+      color: #ffffff !important;
+
+      padding: 11px 18px;
+
+      border-radius: 5px;
+
+      font-weight: 700;
+
+      box-shadow:
+        0 3px 8px rgba(23,63,95,0.18);
+    }
+
+
+    .donate-nav:hover {
+
+      background: #0f3048;
+
+      color: #ffffff !important;
+
+      transform: translateY(-1px);
     }
 
 
@@ -655,6 +682,159 @@ const motto = "Raising Hope. Restoring Dignity. Empowering Communities.";
 
 
     /* =========================================================
+       OUR TEAM
+    ========================================================= */
+
+    .team {
+
+      background: #f7f9fa;
+    }
+
+
+    .team-grid {
+
+      max-width: 1200px;
+
+      margin: 0 auto;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 24px;
+    }
+
+
+    .team-card {
+
+      background: #ffffff;
+
+      border:
+        1px solid #e5eaed;
+
+      border-radius: 10px;
+
+      overflow: hidden;
+
+      box-shadow:
+        0 8px 25px
+        rgba(0,0,0,0.06);
+
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+
+    .team-card:hover {
+
+      transform:
+        translateY(-6px);
+
+      box-shadow:
+        0 15px 35px
+        rgba(0,0,0,0.10);
+    }
+
+
+    .team-photo {
+
+      width: 100%;
+
+      height: 330px;
+
+      overflow: hidden;
+
+      background: #eef2f4;
+    }
+
+
+    .team-photo img {
+
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+
+      object-position: center top;
+
+      display: block;
+
+      transition:
+        transform 0.4s ease;
+    }
+
+
+    .team-card:hover .team-photo img {
+
+      transform:
+        scale(1.025);
+    }
+
+
+    /* Peter's photograph has a little more space
+       around the subject, so the visible crop is
+       positioned higher for better alignment. */
+
+    .peter-photo img {
+
+      object-position:
+        center 32%;
+    }
+
+
+    .team-info {
+
+      padding:
+        24px 22px 27px;
+
+      text-align: center;
+    }
+
+
+    .team-info h3 {
+
+      color: #173f5f;
+
+      font-size: 20px;
+
+      line-height: 1.25;
+
+      margin-bottom: 7px;
+    }
+
+
+    .team-role {
+
+      display: block;
+
+      color: #c17c13;
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+      line-height: 1.4;
+
+      margin-bottom: 15px;
+    }
+
+
+    .team-info p {
+
+      color: #667788;
+
+      font-size: 14px;
+
+      line-height: 1.65;
+
+      margin: 0;
+    }
+
+
+    /* =========================================================
        PROGRAMS
     ========================================================= */
 
@@ -746,6 +926,177 @@ const motto = "Raising Hope. Restoring Dignity. Empowering Communities.";
     .program-card p {
 
       color: #667788;
+
+      font-size: 15px;
+    }
+
+
+    /* =========================================================
+       AGRICULTURE & LIVELIHOODS
+    ========================================================= */
+
+    .agriculture {
+
+      background: #f4f7f3;
+    }
+
+
+    .agriculture-grid {
+
+      max-width: 1200px;
+
+      margin: 0 auto;
+
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 55px;
+
+      align-items: center;
+    }
+
+
+    .agriculture-content h2 {
+
+      color: #173f5f;
+
+      font-size: 40px;
+
+      line-height: 1.2;
+
+      margin-bottom: 22px;
+    }
+
+
+    .agriculture-content p {
+
+      color: #596b7a;
+
+      font-size: 16px;
+
+      margin-bottom: 18px;
+    }
+
+
+    .agriculture-highlight {
+
+      margin-top: 28px;
+
+      padding: 25px 28px;
+
+      background: #ffffff;
+
+      border-left:
+        5px solid #6b8e23;
+
+      border-radius: 7px;
+
+      box-shadow:
+        0 8px 25px
+        rgba(0,0,0,0.06);
+    }
+
+
+    .agriculture-highlight h3 {
+
+      color: #173f5f;
+
+      font-size: 23px;
+
+      margin-bottom: 8px;
+    }
+
+
+    .agriculture-highlight p {
+
+      color: #667788;
+
+      margin: 0;
+
+      font-size: 15px;
+    }
+
+
+    .agriculture-photos {
+
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 16px;
+    }
+
+
+    .agriculture-photo {
+
+      height: 430px;
+
+      border-radius: 10px;
+
+      overflow: hidden;
+
+      box-shadow:
+        0 15px 40px
+        rgba(0,0,0,0.10);
+
+      background: #e8eee7;
+    }
+
+
+    .agriculture-photo img {
+
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+
+      display: block;
+    }
+
+
+    .agriculture-caption {
+
+      max-width: 1200px;
+
+      margin: 18px auto 0;
+
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 16px;
+    }
+
+
+    .agriculture-caption div {
+
+      background: #ffffff;
+
+      padding: 16px 18px;
+
+      border-radius: 7px;
+
+      border:
+        1px solid #e2e9df;
+
+      color: #667788;
+
+      font-size: 14px;
+    }
+
+
+    .agriculture-caption strong {
+
+      display: block;
+
+      color: #173f5f;
+
+      margin-bottom: 4px;
 
       font-size: 15px;
     }
@@ -1612,6 +1963,17 @@ const motto = "Raising Hope. Restoring Dignity. Empowering Communities.";
        TABLET
     ========================================================= */
 
+    @media (max-width: 1000px) {
+
+      .team-grid {
+
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+    }
+
+
     @media (max-width: 900px) {
 
       .header {
@@ -1636,7 +1998,8 @@ const motto = "Raising Hope. Restoring Dignity. Empowering Communities.";
       .director-grid,
       .education-grid,
       .women-grid,
-      .humanitarian-grid {
+      .humanitarian-grid,
+      .agriculture-grid {
 
         grid-template-columns: 1fr;
       }
@@ -1680,6 +2043,14 @@ const motto = "Raising Hope. Restoring Dignity. Empowering Communities.";
       .hero h2 {
 
         font-size: 48px;
+      }
+
+
+      .agriculture-photos {
+
+        max-width: 800px;
+
+        margin: 0 auto;
       }
 
     }
@@ -1732,7 +2103,8 @@ const motto = "Raising Hope. Restoring Dignity. Empowering Communities.";
       }
 
 
-      .nav-button {
+      .nav-button,
+      .donate-nav {
 
         padding:
           9px 13px;
@@ -1804,6 +2176,62 @@ const motto = "Raising Hope. Restoring Dignity. Empowering Communities.";
       .director-content h2 {
 
         font-size: 32px;
+      }
+
+
+      /* =====================================================
+         MOBILE TEAM
+      ===================================================== */
+
+      .team-grid {
+
+        grid-template-columns:
+          1fr;
+
+        gap: 25px;
+      }
+
+
+      .team-photo {
+
+        height: 360px;
+      }
+
+
+      .team-info {
+
+        padding:
+          22px 20px 25px;
+      }
+
+
+      /* =====================================================
+         MOBILE AGRICULTURE
+      ===================================================== */
+
+      .agriculture-content h2 {
+
+        font-size: 32px;
+      }
+
+
+      .agriculture-photos {
+
+        grid-template-columns:
+          1fr;
+      }
+
+
+      .agriculture-photo {
+
+        height: 300px;
+      }
+
+
+      .agriculture-caption {
+
+        grid-template-columns:
+          1fr;
       }
 
 
@@ -1994,6 +2422,10 @@ const motto = "Raising Hope. Restoring Dignity. Empowering Communities.";
         Women
       </a>
 
+      <a href="#agriculture">
+        Agriculture
+      </a>
+
       <a href="#education">
         Education
       </a>
@@ -2015,6 +2447,13 @@ const motto = "Raising Hope. Restoring Dignity. Empowering Communities.";
         class="nav-button"
       >
         Get Involved
+      </a>
+
+      <a
+        href="/donate"
+        class="donate-nav"
+      >
+        Donate
       </a>
 
     </nav>
@@ -2201,7 +2640,7 @@ const motto = "Raising Hope. Restoring Dignity. Empowering Communities.";
 
           <img
             src="/images/director-james-akoon.jpg"
-            alt="James Akoon Akot, Executive Director of Compassion Initiative South Sudan"
+            alt="Executive Director of Compassion Initiative South Sudan"
           />
 
 
@@ -2287,6 +2726,235 @@ const motto = "Raising Hope. Restoring Dignity. Empowering Communities.";
 
 
     <!-- =====================================================
+         OUR TEAM
+    ====================================================== -->
+
+    <section
+      class="team"
+      id="team"
+    >
+
+
+      <div class="section-heading">
+
+
+        <div class="eyebrow">
+          Our Team
+        </div>
+
+
+        <h2>
+          The people behind the work
+        </h2>
+
+
+        <p>
+
+          Compassion Initiative is strengthened by a committed team working
+          together to serve communities, create opportunities and turn
+          compassion into practical action.
+
+        </p>
+
+
+      </div>
+
+
+
+      <div class="team-grid">
+
+
+        <!-- JAMES -->
+
+        <article class="team-card">
+
+
+          <div class="team-photo">
+
+
+            <img
+              src="/images/director-james-akoon.jpg"
+              alt="James Akoon Akot"
+            />
+
+
+          </div>
+
+
+          <div class="team-info">
+
+
+            <h3>
+              James Akoon Akot
+            </h3>
+
+
+            <span class="team-role">
+              Executive Director
+            </span>
+
+
+            <p>
+
+              James provides overall leadership and strategic direction,
+              helping Compassion Initiative coordinate its programmes,
+              partnerships and service to vulnerable communities.
+
+            </p>
+
+
+          </div>
+
+
+        </article>
+
+
+
+        <!-- ANGELINA -->
+
+        <article class="team-card">
+
+
+          <div class="team-photo">
+
+
+            <img
+              src="/images/angelina-adut-yel.jpg"
+              alt="Angelina Adut Yel"
+            />
+
+
+          </div>
+
+
+          <div class="team-info">
+
+
+            <h3>
+              Angelina Adut Yel
+            </h3>
+
+
+            <span class="team-role">
+              Program Coordinator
+            </span>
+
+
+            <p>
+
+              Angelina coordinates the organisation's programmes and helps
+              ensure that activities are planned, implemented and connected
+              to the needs of the communities served.
+
+            </p>
+
+
+          </div>
+
+
+        </article>
+
+
+
+        <!-- ATONG -->
+
+        <article class="team-card">
+
+
+          <div class="team-photo">
+
+
+            <img
+              src="/images/atong-madut-wol.jpg"
+              alt="Atong Madut Wol"
+            />
+
+
+          </div>
+
+
+          <div class="team-info">
+
+
+            <h3>
+              Atong Madut Wol
+            </h3>
+
+
+            <span class="team-role">
+              Finance &amp; Administration Officer
+            </span>
+
+
+            <p>
+
+              Atong supports responsible financial management and administration,
+              helping the organisation maintain strong systems, accountability
+              and effective day-to-day operations.
+
+            </p>
+
+
+          </div>
+
+
+        </article>
+
+
+
+        <!-- PETER -->
+
+        <article class="team-card">
+
+
+          <div class="team-photo peter-photo">
+
+
+            <img
+              src="/images/peter-adhal-tong.jpg"
+              alt="Peter Adhal Tong"
+            />
+
+
+          </div>
+
+
+          <div class="team-info">
+
+
+            <h3>
+              Peter Adhal Tong
+            </h3>
+
+
+            <span class="team-role">
+              Community Outreach Coordinator
+            </span>
+
+
+            <p>
+
+              Peter helps build relationships with communities and supports
+              outreach activities that connect Compassion Initiative's work
+              with people and local priorities.
+
+            </p>
+
+
+          </div>
+
+
+        </article>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
          OUR WORK
     ====================================================== -->
 
@@ -2359,7 +3027,7 @@ const motto = "Raising Hope. Restoring Dignity. Empowering Communities.";
 
 
           <h3>
-            Savings & Micro-Loans
+            Savings &amp; Micro-Loans
           </h3>
 
 
@@ -2385,7 +3053,7 @@ const motto = "Raising Hope. Restoring Dignity. Empowering Communities.";
 
 
           <h3>
-            Skills & Entrepreneurship
+            Skills &amp; Entrepreneurship
           </h3>
 
 
@@ -2437,6 +3105,32 @@ const motto = "Raising Hope. Restoring Dignity. Empowering Communities.";
 
 
           <h3>
+            Agriculture &amp; Livelihoods
+          </h3>
+
+
+          <p>
+
+            We recognise agriculture as an important pathway toward food
+            security, productive livelihoods, resilience and greater
+            self-reliance for communities.
+
+          </p>
+
+
+        </article>
+
+
+
+        <article class="program-card">
+
+
+          <div class="program-number">
+            06
+          </div>
+
+
+          <h3>
             Education Support
           </h3>
 
@@ -2458,7 +3152,7 @@ const motto = "Raising Hope. Restoring Dignity. Empowering Communities.";
 
 
           <div class="program-number">
-            06
+            07
           </div>
 
 
@@ -2477,6 +3171,171 @@ const motto = "Raising Hope. Restoring Dignity. Empowering Communities.";
 
 
         </article>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         AGRICULTURE & LIVELIHOODS
+    ====================================================== -->
+
+    <section
+      class="agriculture"
+      id="agriculture"
+    >
+
+
+      <div class="section-heading">
+
+
+        <div class="eyebrow">
+          Agriculture &amp; Livelihoods
+        </div>
+
+
+        <h2>
+          Growing food. Strengthening livelihoods. Building resilience.
+        </h2>
+
+
+        <p>
+
+          Supporting communities to see agriculture not only as a source of
+          food, but also as a pathway toward greater resilience, productive
+          livelihoods and a more secure future.
+
+        </p>
+
+
+      </div>
+
+
+
+      <div class="agriculture-grid">
+
+
+        <div class="agriculture-content">
+
+
+          <h2>
+            Opportunity can grow from the land.
+          </h2>
+
+
+          <p>
+
+            For many families, the land is closely connected to food, household
+            wellbeing and the ability to earn a living. Compassion Initiative
+            recognises the importance of strengthening agricultural livelihoods
+            as part of a wider approach to community resilience.
+
+          </p>
+
+
+          <p>
+
+            Our work seeks to encourage productive use of available resources
+            and support pathways that can help communities become more
+            self-reliant while strengthening their ability to face economic
+            and environmental challenges.
+
+          </p>
+
+
+          <div class="agriculture-highlight">
+
+
+            <h3>
+              From cultivation to opportunity
+            </h3>
+
+
+            <p>
+
+              When communities have opportunities to produce food and build
+              livelihoods, agriculture can become part of the foundation for
+              dignity, resilience and hope.
+
+            </p>
+
+
+          </div>
+
+
+        </div>
+
+
+
+        <div class="agriculture-photos">
+
+
+          <div class="agriculture-photo">
+
+
+            <img
+              src="/images/agriculture-01.jpg"
+              alt="Community member working among crops in an agricultural field"
+            />
+
+
+          </div>
+
+
+          <div class="agriculture-photo">
+
+
+            <img
+              src="/images/agriculture-02.jpg"
+              alt="Cultivated agricultural field with rows of young crops"
+            />
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+
+      <div class="agriculture-caption">
+
+
+        <div>
+
+
+          <strong>
+            Cultivating opportunity
+          </strong>
+
+
+          Supporting productive agricultural livelihoods that can contribute
+          to household food security and resilience.
+
+
+        </div>
+
+
+        <div>
+
+
+          <strong>
+            Growing for the future
+          </strong>
+
+
+          Strengthening pathways through which communities can use agriculture
+          as part of building more secure and sustainable livelihoods.
+
+
+        </div>
 
 
       </div>
@@ -3321,6 +4180,34 @@ const motto = "Raising Hope. Restoring Dignity. Empowering Communities.";
         <div class="gallery-item">
 
           <img
+            src="/images/agriculture-01.jpg"
+            alt="Agricultural activity"
+          />
+
+          <div class="gallery-caption">
+            Agriculture and community livelihoods
+          </div>
+
+        </div>
+
+
+        <div class="gallery-item">
+
+          <img
+            src="/images/agriculture-02.jpg"
+            alt="Cultivated agricultural field"
+          />
+
+          <div class="gallery-caption">
+            Growing food and strengthening livelihoods
+          </div>
+
+        </div>
+
+
+        <div class="gallery-item">
+
+          <img
             src="/images/education-01.jpg"
             alt="Children studying"
           />
@@ -3451,7 +4338,7 @@ const motto = "Raising Hope. Restoring Dignity. Empowering Communities.";
             Your support can help vulnerable women access opportunities,
             children receive learning materials, and communities respond to
             urgent needs. If you would like to support Compassion Initiative,
-            please contact us directly using the details above.
+            please visit our donation page or contact us directly.
 
           </p>
 
@@ -3519,7 +4406,7 @@ const motto = "Raising Hope. Restoring Dignity. Empowering Communities.";
           </li>
 
           <li>
-            Savings & Micro-Loans
+            Savings &amp; Micro-Loans
           </li>
 
           <li>
@@ -3528,6 +4415,10 @@ const motto = "Raising Hope. Restoring Dignity. Empowering Communities.";
 
           <li>
             Community Development
+          </li>
+
+          <li>
+            Agriculture &amp; Livelihoods
           </li>
 
           <li>
